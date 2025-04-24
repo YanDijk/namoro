@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="data">30/05</h1>
+        <div class="box">
+            <h1 class="text">Feliz 3 anos juntos!</h1>
+            
+            <button class="inicio" onclick="window.location.href='pagina1.html'">Iniciar</button>
+        </div>
+    </div>
+    <script>
+        function createHeart() {
+          const heart = document.createElement("div");
+          heart.classList.add("heart");
+          heart.innerText = "💖"; // ou "❤️"
+    
+          heart.style.left = Math.random() * 100 + "vw"; // posição horizontal aleatória
+          heart.style.fontSize = Math.random() * 20 + 10 + "px"; // tamanho aleatório
+          heart.style.animationDuration = Math.random() * 2 + 3 + "s"; // duração da queda
+    
+          document.body.appendChild(heart);
+    
+          setTimeout(() => {
+            heart.remove();
+          }, 5000); // remove o coração após cair
+        }
+    
+        setInterval(createHeart, 200); // cria um coração a cada 200ms
+      </script>
+</body>
+</html>

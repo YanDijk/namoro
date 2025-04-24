@@ -1,0 +1,387 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background: linear-gradient(45deg, rgb(248, 160, 160), rgb(235, 11, 179), rgb(222, 115, 243));
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+    overflow-y: scroll;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+body {
+    margin: 0px;
+     overflow: hidden;
+      background-color: #000;
+}
+
+.heart {
+    position: fixed;
+    top: -30px;
+    color: pink;
+    font-size: 20px;
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.356);
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+.data {
+    position: absolute;
+    margin-bottom: 40%;
+    font-family: cursive;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 60px;
+    background: rgba(255, 0, 179, 0.733);
+    border-radius: 15px;
+}
+
+.text {
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    font-family: fantasy;
+    margin-bottom: 45%;
+}
+
+.inicio {
+    position: absolute;
+    text-decoration: none;
+    font-size: 50px;
+    font-family: monospace;
+    color: white;
+    padding: 20px;
+    background: pink;
+    border-radius: 10px;
+    border-style: none;
+    margin-top: 15%;
+}
+
+.inicio:hover {
+    cursor: pointer;
+    background: rgb(199, 116, 129);
+}
+
+.declaracao {
+    position: relative;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    font-family: fantasy;
+    margin-top: 40%;
+  
+}
+
+.prxPag {
+
+        position: relative;
+        text-decoration: none;
+        font-size: 50px;
+        font-family: monospace;
+        color: white;
+        padding: 20px;
+        background: pink;
+        border-radius: 10px;
+        border-style: none;
+        margin-bottom: 5%;
+
+}
+
+.prxPag:hover {
+    cursor: pointer;
+    background-color: plum;
+}
+
+.areatexto {
+    width: 60%;
+    height: 60%;
+    
+    position: relative;
+    margin: 10px;
+}
+
+.otexto {
+    color: aliceblue;
+    font-size: 20px;
+    text-size-adjust: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.imagi {
+    
+    border-radius: 20px;
+}
+
+.jogo {
+    position: relative;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    font-family: fantasy;
+}
+
+#simButton {
+    font-size: 40px;
+    padding: 10px 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: left;
+    margin: 1%;
+    border-style: none;
+    background: pink;
+    border-radius: 30px;
+}
+
+#naoButton {
+    font-size: 40px;
+    padding: 10px 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: left;
+    margin: 1%;
+    border-style: none;
+    background: pink;
+    border-radius: 30px;
+}
+
+#simButton:hover {
+    font-size: 40px;
+    padding: 10px 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: left;
+    margin: 1%;
+    border-style: none;
+    background: rgb(253, 157, 173);
+
+    border-radius: 30px;
+}
+
+#naoButton:hover {
+    font-size: 40px;
+    padding: 10px 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: left;
+    margin: 1%;
+    border-style: none;
+    background: rgb(253, 157, 173);
+    border-radius: 30px;
+}
+
+/* Estilo do botão "Não" quando ele estiver desabilitado */
+#simButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#naoButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.butoes {
+   
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 80%;
+    height:
+    
+    80%;
+}
+
+
+.mensagem {
+    display: none; /* Oculta inicialmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo opaco */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}
+
+.mensagem p {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.mensagem button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 1%;
+    background-color: red;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.ir {
+    font-size: 40px;
+    padding: 10px 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: left;
+    margin: 1%;
+    border-style: none;
+    background: pink;
+    border-radius: 30px;
+}
+
+.ir:hover {
+    font-size: 40px;
+    padding: 10px 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: left;
+    margin: 1%;
+    border-style: none;
+    background: rgb(253, 157, 173);
+    border-radius: 30px;
+}
+
+.informacoes {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+   
+    flex-direction: column;
+}
+
+.descricao {
+    color: #fff;
+    font-size: 40px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.cont {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background: linear-gradient(45deg, rgb(248, 160, 160), rgb(235, 11, 179), rgb(222, 115, 243));
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+    overflow-y: scroll;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+  .pergunta {
+    display: none;
+    background: white;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+  }
+
+  .pergunta.ativa {
+    display: block;
+  }
+
+  .requestB {
+    background-color: #ff66a3;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .requestB:hover {
+    background-color: #e05590;
+  }
+
+  .inp {
+      border-radius: 20px;
+      padding: 10px;
+      border-style: none;
+      background-color: #ccc;
+      font-size: 20px;
+  }
+
+  .areatexto {
+    background-color: #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    border-style: none;
+    font-size: 20px;
+  }
+  
+  .selecao {
+    background-color: #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    border-style: none;
+    font-size: 20px;
+  }
+
+  .opcao {
+    background-color: #ccc;
+    font-size: 20px;
+    padding: 10px;
+    border-style: none;
+  }
+
+  .question {
+    font-size: 30px;
+    font-family: sans-serif;
+
+  }

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Perguntas de Amor 💖</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="cont">
+    <div id="perguntas-container">
+      <div class="pergunta ativa">
+        <p class="question">1️⃣ Qual é seu nome?</p>
+        <p>É pra ter certeza que é você</p>
+        <input class="inp" type="text" name="resposta1" placeholder="Escreva aqui..." />
+        <button class="requestB" onclick="proximaPergunta()">Próxima</button>
+      </div>
+
+      <div class="pergunta">
+        <p class="question">2️⃣ O que você mais ama em mim?</p>
+        <textarea class="areatexto" name="resposta2" placeholder="Escreva com carinho..."></textarea>
+        <button class="requestB" onclick="proximaPergunta()">Próxima</button>
+      </div>
+
+      <div class="pergunta">
+        <p class="question">3️⃣ Qual é sua memória favorita sobre nós?</p>
+        <textarea class="areatexto" name="resposta3" placeholder="Pense bem..."></textarea>
+        <button class="requestB" onclick="proximaPergunta()">Próxima</button>
+      </div>
+
+      <div class="pergunta">
+        <p class="question">4️⃣ Qual foi o primeiro momento que você percebeu que me amava?</p>
+        <textarea class="areatexto" name="resposta4" placeholder="Pense bem..."></textarea>
+        <button class="requestB" onclick="proximaPergunta()">Próxima</button>
+      </div>
+
+      <div class="pergunta">
+        <p class="question">5️⃣ Qual é o momento que você mais gosta de passar comigo?</p>
+        <textarea class="areatexto" name="resposta5" placeholder="Qual é?"></textarea>
+        <button class="requestB" onclick="proximaPergunta()">Próxima</button>
+      </div>
+
+      <div class="pergunta">
+        <p class="question">6️⃣ Se você tivesse que escolher um lugar para viajar com a gente, onde iríamos?</p>
+        <select class="selecao" name="resposta6">
+          <option class="opcao" value="França">França</option>
+          <option class="opcao" value="Japão">Japão</option>
+          <option class="opcao" value="EUA">EUA</option>
+          <option class="opcao" value="Maldivas">Maldivas</option>
+        </select>
+        <button class="requestB" onclick="proximaPergunta()">Próxima</button>
+      </div>
+
+      <div class="pergunta">
+        <p class="question">7️⃣ Qual foi a coisa mais romântica que fizemos até hoje?</p>
+        <textarea class="areatexto" name="resposta7" placeholder="Digite aqui..."></textarea>
+        <button class="requestB" onclick="proximaPergunta()">Próxima</button>
+      </div>
+
+      <div class="pergunta">
+        <p class="question">8️⃣ Se nosso amor fosse um filme, qual gênero seria?</p>
+        <select class="selecao" name="resposta8">
+          <option class="opcao" value="Romance">Romance</option>
+          <option class="opcao" value="Comédia Romântica">Comédia Romântica</option>
+          <option class="opcao" value="Drama">Drama</option>
+          <option class="opcao" value="Aventura">Aventura</option>
+        </select>
+        <button class="requestB" onclick="proximaPergunta()">Próxima</button>
+      </div>
+
+      <div class="pergunta">
+        <p class="question">9️⃣ Se pudesse me dar um apelido fofinho, qual seria?</p>
+        <textarea class="areatexto" name="resposta9" placeholder="Digite aqui..."></textarea>
+        <button class="requestB" onclick="proximaPergunta()">Próxima</button>
+      </div>
+
+      <div class="pergunta">
+        <p class="question">🔟 Qual é o seu sonho para o nosso futuro juntos?</p>
+        <select class="selecao" name="resposta10">
+          <option class="opcao" value="Receber uma carta de amor">💌 Receber uma carta de amor</option>
+          <option class="opcao" value="Flores surpresa">🌹 Flores surpresa</option>
+          <option class="opcao" value="Um abraço apertado">🥰 Um abraço apertado</option>
+          <option class="opcao" value="Ouvir uma música nossa">🎶 Ouvir uma música nossa</option>
+        </select>
+        <button class="requestB" onclick="proximaPergunta()">Próxima</button>
+      </div>
+
+      <div class="pergunta">
+        <p class="question">1️⃣1️⃣ Qual desses gestos mais faz você se sentir amada?</p>
+        <select class="selecao" name="resposta11">
+          <option class="opcao" value="Construir uma casa juntos">🏡 Construir uma casa juntos</option>
+          <option class="opcao" value="Viajar o mundo">🛫 Viajar o mundo</option>
+          <option class="opcao" value="Casar e formar uma família">💍 Casar e formar uma família</option>
+          <option class="opcao" value="Ficar sempre juntos">🕊️ Ficar sempre juntos</option>
+        </select>
+        <button class="requestB" onclick="enviarResposta()">Enviar Respostas</button>
+      </div>
+
+      <div class="pergunta">
+        <p class="question">✨ Obrigado por responder com o coração! 💞</p>
+        <p class="question">Te amo demais! 💖</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let perguntaAtual = 0;
+    const perguntas = document.querySelectorAll('.pergunta');
+
+    function proximaPergunta() {
+      perguntas[perguntaAtual].classList.remove('ativa');
+      perguntaAtual++;
+      if (perguntaAtual < perguntas.length) {
+        perguntas[perguntaAtual].classList.add('ativa');
+      }
+    }
+
+    function enviarResposta() {
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwozGrdqRUisYyxTo8OP5naLNIc7yieuEjlZPEVviT2sQyHO0WQwhLw2PaRVtLZwBM_8w/exec';  // Substitua com a URL do Apps Script
+
+      const formData = new FormData();
+      formData.append('nome', document.querySelector('input[name="resposta1"]').value);
+      formData.append('resposta1', document.querySelector('input[name="resposta1"]').value);
+      formData.append('resposta2', document.querySelector('textarea[name="resposta2"]').value);
+      formData.append('resposta3', document.querySelector('textarea[name="resposta3"]').value);
+      formData.append('resposta4', document.querySelector('textarea[name="resposta4"]').value);
+      formData.append('resposta5', document.querySelector('textarea[name="resposta5"]').value);
+      formData.append('resposta6', document.querySelector('select[name="resposta6"]').value);
+      formData.append('resposta7', document.querySelector('textarea[name="resposta7"]').value);
+      formData.append('resposta8', document.querySelector('select[name="resposta8"]').value);
+      formData.append('resposta9', document.querySelector('textarea[name="resposta9"]').value);
+      formData.append('resposta10', document.querySelector('select[name="resposta10"]').value);
+      formData.append('resposta11', document.querySelector('select[name="resposta11"]').value);
+
+      fetch(scriptURL, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        alert('Respostas enviadas com sucesso! 💌');
+        proximaPergunta();  // Vai para a mensagem final
+      })
+      .catch(error => alert('Erro ao enviar respostas 😢'));
+    }
+  </script>
+</body>
+</html>
