@@ -7,7 +7,7 @@
     display: flex;
     position: relative;
     justify-content: center;
-    background: linear-gradient(45deg, rgb(248, 160, 160), rgb(235, 11, 179), rgb(222, 115, 243));
+    background: linear-gradient(45deg, rgb(255, 0, 0), rgb(255, 69, 209), rgb(188, 17, 223));
     background-size: 400% 400%;
     animation: gradientAnimation 5s ease infinite;
     overflow-y: scroll;
@@ -326,13 +326,224 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     text-align: center;
-    width: 300px;
+    width: 500px;
+    
   }
+
+  
 
   .pergunta.ativa {
     display: block;
   }
 
+  .requestB {
+    background-color: #ff66a3;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 20px;
+    color: white;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .requestB:hover {
+    background-color: #e05590;
+  }
+
+  .inp {
+      border-radius: 20px;
+      padding: 10px;
+      border-style: none;
+      background-color: #ccc;
+      font-size: 25px;
+  }
+
+  .areatexto {
+    background-color: #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    border-style: none;
+    font-size:25px;
+  }
+  
+  .selecao {
+    background-color: #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    border-style: none;
+    font-size: 20px;
+  }
+
+  .finalizando {
+    color: #fff;
+    font-family: fantasy;
+    font-size: 60px;
+  }
+
+.oFinalizando {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.iacabou {
+    background-color: #ff66a3;
+    border-radius: 30px;
+    border-style: none;
+    padding: 12px;
+    font-size: 20px;
+    color: #fff;
+
+}
+
+.iacabou:hover {
+    background-color: #e73d81;
+    cursor: pointer;
+}
+
+  .opcao {
+    background-color: #ccc;
+    font-size: 20px;
+    padding: 10px;
+    border-style: none;
+  }
+
+  .question {
+    font-size: 60px;
+    font-family: sans-serif;
+
+  }
+  #pe {
+    font-size: 40px;
+  }
+
+  .agr {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 50px;
+  }
+
+  .question-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options button {
+    background-color: #ff66a3;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.options button:hover {
+    background-color: #e73d81;
+}
+
+#question {
+    font-family: fantasy;
+    font-size: 60px;
+    color: #fff;
+}
+
+#feedback {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+  @media (max-width: 768px) {
+    .finalizando {
+        color: #fff;
+        font-family: fantasy;
+        font-size: 30px;
+      }
+   .data {
+    font-size: 50px;
+    margin-bottom: 150%;
+   }
+   .box {
+    width: 70%;
+    height: 50%;
+   }
+   .text {
+    font-size: 30px;
+   }
+   .inicio {
+    font-size: 20px;
+    padding: 15px;
+   }
+
+   .declaracao {
+    font-size: 30px;
+    margin-top: 90%;
+   }
+   .imagi {
+    max-width: 30%;
+    height: auto;
+   }
+   .artexto {
+    width: 80%;
+    height: 90%;
+    
+   }
+   .otexto {
+    font-size: 13px;
+   }
+   .prxPag {
+    font-size: 15px;
+    padding: 20px;
+   }
+   .jogo {
+    font-size: 25px;
+   }
+   #simButton {
+    font-size: 20px;
+   }
+   #naoButton {
+    font-size: 20px;
+   }
+   .mensagem p {
+    font-size: 25px;
+   }
+   .informacoes {
+    width: 70%;
+    height: 70%;
+    
+   }
+   .descricao {
+    font-size: 35px;
+   }
+   .pergunta {
+    display: none;
+    background: white;
+    padding: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+  }
+
+  .pergunta.ativa {
+    display: block;
+    
+  }
+  
+  .cont {
+    font-size: 50px;
+  }
   .requestB {
     background-color: #ff66a3;
     border: none;
@@ -380,8 +591,51 @@ body {
     border-style: none;
   }
 
-  .question {
-    font-size: 30px;
-    font-family: sans-serif;
+  
 
-  }
+  
+  .question-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options button {
+    background-color: #ff66a3;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.options button:hover {
+    background-color: #e73d81;
+}
+
+#question {
+    font-family: fantasy;
+    font-size: 20px;
+    color: #fff;
+}
+
+#feedback {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+  
+}
+
+/* Para telas pequenas (smartphones) */
+@media (max-width: 480px) {
+    
+}

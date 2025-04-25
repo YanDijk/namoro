@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/doodle-love-heart-free.png" type="image/x-icon">
+    <title>Quiz Interativo</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link para o CSS -->
+</head>
+<body>
+
+    <div class="container">
+        <div class="question-container">
+            <p id="question">Pergunta 1: Quando começamos a nos falar?</p>
+        </div>
+
+        <div class="options">
+            <button class="option" onclick="checkAnswer(0)">15/05</button>
+            <button class="option" onclick="checkAnswer(1)">24/05</button>
+            <button class="option" onclick="checkAnswer(2)">28/05</button>
+            <button class="option" onclick="checkAnswer(3)">30/05</button>
+        </div>
+
+        <div id="feedback"></div>
+    </div>
+
+    <script src="js/quiz.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>

@@ -2,15 +2,16 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Perguntas de Amor 💖</title>
+  <title>Perguntas de Amor</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="assets/doodle-love-heart-free.png" type="image/x-icon">
 </head>
 <body>
   <div class="cont">
     <div id="perguntas-container">
       <div class="pergunta ativa">
         <p class="question">1️⃣ Qual é seu nome?</p>
-        <p>É pra ter certeza que é você</p>
+        <p id="pe">É pra ter certeza que é você</p>
         <input class="inp" type="text" name="resposta1" placeholder="Escreva aqui..." />
         <button class="requestB" onclick="proximaPergunta()">Próxima</button>
       </div>
@@ -96,8 +97,9 @@
       </div>
 
       <div class="pergunta">
-        <p class="question">✨ Obrigado por responder com o coração! 💞</p>
-        <p class="question">Te amo demais! 💖</p>
+        <p class="question">Obrigado por responder💞</p>
+        <p class="question">Você será redirecionada para um quiz...</p>
+
       </div>
     </div>
   </div>
@@ -138,6 +140,9 @@
       .then(response => {
         alert('Respostas enviadas com sucesso! 💌');
         proximaPergunta();  // Vai para a mensagem final
+        setTimeout(() => {
+        window.location.href='quiz.html'
+    }, 10000);
       })
       .catch(error => alert('Erro ao enviar respostas 😢'));
     }
